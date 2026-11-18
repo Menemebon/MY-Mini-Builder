@@ -1,45 +1,34 @@
-<h1 align="center">📱 MY BUILDER</h1>
-<h3 align="center">Telefonda kodla • Telefonda APK yap • Telefonda imzala</h3>
 
-<p align="center"><b>PC'si olmayanlar için Android uygulama yapım atölyesi.</b></p>
+📱 MY BUILDER
+Code on Your Phone • Build APKs on Your Phone • Sign on Your Phone
 
----
+An Android app development workshop for people without a PC.
 
-## ✨ Ne yapar?
+✨ What Does It Do?
+🌐 Converts WEB / WEBSITE projects into signed APK files directly on your phone (no PC required).
+🔑 Generates, imports, exports, and backs up Keystores (.p12).
+🎮 Ready-to-play mini-games: Snake, Memory, Balloon Pop, Jump, Tic-Tac-Toe — play them or add them to your project and build your own APK.
+⚙️ Customize app icons, permissions, theme colors, fullscreen mode, and JavaScript bridge (Android.toast / share / vibrate / copy / openUrl).
+📦 Exports Java / Kotlin projects as Android Studio ZIP files.
+🚀 Installation (One-Time Setup on a PC)
+Open Android Studio → File > Open → Select this folder.
+Wait for Gradle Sync to finish (if prompted, select Use JVM 21).
+Select Build > Build APK(s) → Find the APK at app/build/outputs/apk/debug/app-debug.apk.
+Install the APK on your phone. From this point on, everything can be done directly on your phone.
+📲 How to Use on Your Phone
+Select New Project → Choose WEB or WEBSITE (or go to Ready Games → Add to Project).
+Write your code or enter a URL → Tap Test.
+Tap Build APK → Install or Save / Share.
+To update your app, you must use the same signing key → Go to Keys → Back Up.
+⚠️ Limitations
+Java/Kotlin projects cannot be compiled directly on your phone (export as ZIP → build with Android Studio).
+Generated APKs require minSdk 24 or higher.
+If you lose your keystore, you won't be able to publish updates to your app. Always keep a backup!
+📁 Project Structure
+text
+app/src/main/java/com/mybuilder/app/   → Application source code (Java)
+app/src/main/assets/games/             → Ready-made games (HTML)
+app/src/main/assets/template/          → ZIP export templates
 
-- 🌐 **WEB / SİTE** projelerini **telefonda** imzalı **APK**'ya çevirir (PC yok)
-- 🔑 **Keystore** üretir, içe/dışa aktarır, yedekler (.p12)
-- 🎮 **Hazır mini oyunlar**: Yılan, Hafıza, Balon Patlat, Zıpla, XOX — oyna ya da projeye ekleyip kendi APK'n yap
-- ⚙️ İkon, izinler, tema rengi, tam ekran, JS köprüsü (`Android.toast / share / vibrate / copy / openUrl`)
-- 📦 Java / Kotlin projeleri için Android Studio **ZIP** çıktısı
 
-## 🚀 Kurulum (bir kez, PC'de)
-
-1. Android Studio'yu aç → **File > Open** → bu klasörü seç
-2. Gradle Sync bitsin ("Use JVM 21" çıkarsa kabul et)
-3. **Build > Build APK(s)** → `app/build/outputs/apk/debug/app-debug.apk`
-4. APK'yı telefona kur. Bundan sonrası tamamen telefonda.
-
-## 📲 Telefonda kullanım
-
-1. **Yeni Proje** → WEB veya SİTE seç (ya da **Hazır Oyunlar → Projeye ekle**)
-2. Kodunu yaz / URL gir → **Test Et**
-3. **APK Oluştur** → **Kur** veya **Kaydet / Paylaş**
-4. Güncelleme için aynı anahtar şart → **Anahtarlar → Yedekle**
-
-## ⚠️ Sınırlar
-
-- Java/Kotlin projeleri telefonda derlenmez (ZIP → Android Studio)
-- Üretilen APK minSdk 24+
-- Keystore'unu kaybedersen uygulamayı güncelleyemezsin, yedekle
-
-## 📁 Yapı
-
-```
-app/src/main/java/com/mybuilder/app/   → uygulama kodu (Java)
-app/src/main/assets/games/             → hazır oyunlar (HTML)
-app/src/main/assets/template/          → ZIP çıktısı şablonu
-```
-
----
-<p align="center">Made with ❤️ — <b>My Builder</b></p>
+<p align="center">Made with N.U.B STUDIO — <b>My Builder</b></p>
