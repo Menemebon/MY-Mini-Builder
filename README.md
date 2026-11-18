@@ -110,4 +110,4 @@ No license has been specified yet.
 
 ---
 
-<p align="center">Made with ❤️ — <b>My Mini Builder</b></p>
+<p align="center">Made with N.U.B STUDİO — <b>My Mini Builder</b></p>
