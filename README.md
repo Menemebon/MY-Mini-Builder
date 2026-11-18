@@ -1,113 +1,173 @@
-<h1 align="center">📱 My Mini Builder</h1>
+📱 My Mini Builder
 
 <p align="center">
-  <b>Build, sign and update Android apps — entirely from your phone.</b><br>
-  No PC required.
+<b>Build, Sign & Update Android Apps — Directly From Your Phone!</b>
+<br>
+No PC required for everyday app building.
 </p>
 
 <p align="center">
-  <img alt="Platform" src="https://img.shields.io/badge/platform-Android%2024%2B-3DDC84?logo=android&logoColor=white">
-  <img alt="Language" src="https://img.shields.io/badge/language-Java-orange">
-  <img alt="Version" src="https://img.shields.io/badge/version-5.0-blue">
+<img src="https://img.shields.io/badge/Platform-Android%207.0%2B-3DDC84?logo=android&logoColor=white">
+<img src="https://img.shields.io/badge/Language-Java-orange?logo=java">
+<img src="https://img.shields.io/badge/Version-5.0-blue">
+<img src="https://img.shields.io/badge/Status-Active-success">
 </p>
 
----
+🚀 Download
 
-## ✨ Features
+<p align="center">
+<a href="https://github.com/Menemebon/MY-Mini-Builder/releases/latest">
+<img src="https://img.shields.io/badge/⬇%20DOWNLOAD%20APK-Latest%20Release-2ea44f?style=for-the-badge">
+</a>
+</p>
 
-- 🌐 **Web projects to APK** — turn HTML / CSS / JS projects (or a website URL) into a signed APK directly on your phone.
-- 🔑 **Keystore management** — create, import, export and back up signing keys (`.p12`).
-- ⚙️ **App settings** — icon, permissions, theme color, full screen, screen orientation and a JavaScript bridge (`Android.toast`, `Android.share`, `Android.vibrate`, `Android.copy`, `Android.openUrl`).
-- 📦 **Android Studio export** — export Java / Kotlin projects as a ZIP to open in Android Studio.
-- 💾 **Backup & restore** — save all projects into one ZIP file and restore them on any device.
-- 🔄 **Over-the-air updates** — the app checks GitHub Releases for a newer version, downloads the APK and starts the installer.
-- 🌍 **Bilingual UI** — Turkish when the phone language is Turkish, English otherwise.
+Download the latest APK from GitHub Releases:
 
----
+👉 https://github.com/Menemebon/MY-Mini-Builder/releases/latest
 
-## 🚀 Building the app (once, on a PC)
+Always get the latest available version.
+Download the APK directly to your Android device.
+Install it and start building apps!
+✨ Features
+🌐 Web to APK
+Convert HTML, CSS and JavaScript projects into Android APKs.
+Turn existing websites into Android applications.
+Preview projects before building.
+Generate signed APK files directly on your phone.
+🔑 Keystore Manager
+Create signing keys.
+Import existing keystores.
+Export and back up .p12 files.
+Keep your signing keys safe for future updates.
+⚙️ Advanced App Settings
 
-1. Open **Android Studio** → **File › Open** → select this folder.
-2. Wait for Gradle Sync to finish (accept *Use JVM 21* if asked).
-3. Run **Build › Build APK(s)**.
-4. The APK is generated at `app/build/outputs/apk/debug/app-debug.apk`.
-5. Install it on your phone. Everything else happens on the phone.
+Customize your applications with:
 
----
+Custom app icons.
+Android permissions.
+Custom theme colors.
+Full-screen mode.
+Screen orientation.
+JavaScript bridge support.
 
-## 📲 Using the app
+Available JavaScript functions:
 
-1. Tap **New project** and choose **WEB** or **SITE**.
-2. Write your code or enter a URL, then tap **Test**.
-3. Tap **Build APK**, then **Install** or **Save / Share**.
-4. For future updates to a published app, you must sign with the **same key** — back up your keystore under **Keys › Back up**.
+Android.toast
+Android.share
+Android.vibrate
+Android.copy
+Android.openUrl
+📦 Android Studio Export
+Export Java and Kotlin projects as ZIP files.
+Open exported projects in Android Studio.
+Continue development on a computer.
+💾 Backup & Restore
+Back up all projects into one ZIP file.
+Restore projects on another device.
+Existing projects are never overwritten.
+🔄 Automatic Updates
+Check GitHub Releases for new versions.
+Download newer APK versions.
+Start Android's package installer.
+Get update notifications when a new version is available.
+🌍 Languages
+English interface.
+Turkish interface.
+Automatic language selection based on device language.
+🛠️ Build From Source
 
----
+You only need a PC once to build the application.
 
-## ⚙️ Settings
+Install Android Studio.
+Open this repository using File → Open.
+Wait for Gradle Sync.
+Use JDK 21 if requested.
+Select Build → Build APK(s).
+Find the generated APK here:
 
-Settings are app-wide and live outside of any project. Open them with the gear icon on the project list.
+app/build/outputs/apk/debug/app-debug.apk
 
-- **Backup**
-  - *Save backup (ZIP)* — saves all projects into a single file.
-  - *Restore from backup* — adds the projects from a ZIP as new projects. Existing projects are never overwritten.
-- **Update**
-  - *Check for updates* — compares the installed version with the latest GitHub Release and installs the new APK if you confirm.
+Install the APK on your Android device.
 
-The app also checks for updates quietly each time it starts and only shows a prompt when a newer version exists.
+After installation, you can create and build web applications directly from your phone.
 
----
+📲 How to Use
+Open My Mini Builder.
+Tap New Project.
+Choose WEB or SITE.
+Write your HTML, CSS and JavaScript code or enter a website URL.
+Tap Test to preview your application.
+Tap Build APK.
+Install, save or share your generated APK.
 
-## 🔄 How updates work
+Important: Always back up your signing key. Future updates to an already published application must use the same signing key.
 
-The app reads the latest release of this repository:
+🔄 Publishing Updates on GitHub
 
-```
+My Mini Builder uses GitHub Releases to distribute new versions.
+
+To publish an update:
+
+Open app/build.gradle.
+Increase versionCode and update versionName.
+Build and sign the new APK.
+Open your GitHub repository.
+Navigate to Releases → Draft a new release.
+Create a new tag, such as v5.1.
+Upload the signed APK.
+Publish the release.
+
+Your users can download the new version from:
+
 https://github.com/Menemebon/MY-Mini-Builder/releases/latest
-```
 
-1. Update `versionCode` and `versionName` in `app/build.gradle` (for example `versionCode 6` and `versionName "5.1"`).
-2. On GitHub, go to **Releases › Draft a new release**.
-3. Set the tag to match the version, for example `v5.1`.
-4. Attach the **signed** APK file (`.apk`) and publish the release.
+Update Requirements
+The APK must use the same signing key as the previously installed version.
+The new version must have a higher versionCode.
+Android may request permission to install apps from unknown sources.
+Never lose your original signing key.
+📱 System Requirements
+Requirement	Details
+Operating System	Android 7.0 Nougat or newer
+Minimum SDK	API 24
+Programming Language	Java
+Build System	Gradle
+Java Version	JDK 21 for building
 
-Phones will then offer the update. Important requirements:
+What is Android API 24?
 
-- The new APK must be signed with the **same signing key** as the installed app. An APK signed with a different key cannot be installed over the existing one.
-- The release tag must be a **higher version** than the installed version.
-- Android asks for permission to install unknown apps the first time. Allow it and tap *Check for updates* again.
+API 24 corresponds to Android 7.0 Nougat. This means the app supports Android 7.0 and newer versions, not Android version 24.
 
----
-
-## ⚠️ Limitations
-
-- Java and Kotlin projects are not compiled on the phone; export them as ZIP and open them in Android Studio.
-- Generated APKs target Android 7.0+ (minSdk 24).
-- If you lose your keystore, you cannot update an app you have already published. Back it up.
-- The package name `com.mybuilder.app` is kept on purpose. Changing it would make existing installations impossible to update.
-
----
-
-## 🧩 Project structure
-
-```
+⚠️ Limitations
+Java and Kotlin projects cannot be compiled directly on the phone.
+Java and Kotlin projects can be exported as ZIP files for Android Studio.
+Generated applications require Android 7.0 or newer.
+Losing your signing key prevents normal updates to applications signed with that key.
+The package name com.mybuilder.app is intentionally preserved for compatibility with existing installations.
+📂 Project Structure
+text
 app/src/main/java/com/mybuilder/app/
-  ProjectsActivity.java        → main screen (project list)
-  GlobalSettingsActivity.java  → app-wide settings (backup, updates)
-  UpdateChecker.java           → GitHub Releases over-the-air updates
-  Installer.java               → streamed APK installation via PackageInstaller
-  Backup.java                  → all-projects ZIP backup and restore
-  GitHubSync.java              → network helpers
-  Lang.java                    → Turkish / English text table
-app/src/main/assets/template/  → Android Studio ZIP export template
-```
+├── ProjectsActivity.java
+├── GlobalSettingsActivity.java
+├── UpdateChecker.java
+├── Installer.java
+├── Backup.java
+├── GitHubSync.java
+└── Lang.java
 
----
+app/src/main/assets/template/
+└── Android Studio ZIP export template
 
-## 📄 License
+📄 License
 
 No license has been specified yet.
 
----
-
-<p align="center">Made with N.U.B STUDİO — <b>My Mini Builder</b></p>
+<p align="center">
+<b>Made with N.U.B STUDİO</b>
+<br>
+My Mini Builder
+<br><br>
+<a href="https://github.com/Menemebon/MY-Mini-Builder/releases/latest">
+Download Latest Version
+</a>
+</p>
