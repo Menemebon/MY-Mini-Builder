@@ -1,88 +1,113 @@
 <h1 align="center">📱 My Mini Builder</h1>
-<h3 align="center">Code on your phone • Build APKs on your phone • Sign on your phone</h3>
-
-<p align="center"><b>An Android app workshop for people without a PC.</b></p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Android-7.0%2B-3DDC84?logo=android&logoColor=white" alt="Android 7.0+">
-  <img src="https://img.shields.io/badge/Language-Java-orange" alt="Java">
-  <img src="https://img.shields.io/badge/Version-4.0-blue" alt="v4.0">
+  <b>Build, sign and update Android apps — entirely from your phone.</b><br>
+  No PC required.
+</p>
+
+<p align="center">
+  <img alt="Platform" src="https://img.shields.io/badge/platform-Android%2024%2B-3DDC84?logo=android&logoColor=white">
+  <img alt="Language" src="https://img.shields.io/badge/language-Java-orange">
+  <img alt="Version" src="https://img.shields.io/badge/version-5.0-blue">
 </p>
 
 ---
 
-## ✨ What does it do?
+## ✨ Features
 
-- 🌐 Turns **WEB** (HTML / CSS / JS) and **SITE** (URL) projects into signed **APKs** right on your **phone**, no computer needed
-- ✍️ Built-in **code editor**: syntax highlighting, undo / redo, file manager
-- ▶️ **Live test**: run your project inside the app before building the APK
-- 🔑 **Keystore manager**: generate new keys, import them, view the password, back up as `.p12`
-- ♻️ **Automatic backup**: projects and keys are backed up to `Downloads/MyBuilder`. They are restored even if you uninstall and reinstall the app
-- ☕ Ready-to-open **ZIP** export for **Java / Kotlin** projects in Android Studio
-- 🔄 **Update check** from Settings (GitHub releases)
-
-## ⚙️ Project settings
-
-| Setting | Description |
-|---|---|
-| App name, package name | In `com.name.app` format, validated |
-| Version name / code | Auto-increment supported |
-| Icon | Pick from gallery or use the default icon |
-| Screen orientation | Auto, portrait, landscape, sensor |
-| Appearance | Fullscreen, keep screen on, status bar color |
-| SDK | Min SDK and target SDK (max 34) |
-| Permissions | Internet, camera, microphone, location, storage, notifications, vibration, contacts, calls, SMS, Bluetooth and more |
-| APK signing | Default key or your own |
-| External links | Open external links in the browser for SITE projects |
-
-### 🔌 JS bridge
-
-If you enable it in settings, your WEB projects can access phone features from JavaScript:
-
-```js
-Android.toast("Hello!");            // short on-screen message
-Android.share("Text to share");     // share sheet
-Android.vibrate(200);               // vibrate (ms)
-Android.copy("Copy to clipboard");  // copy to clipboard
-Android.openUrl("https://...");     // open in browser
-```
-
-## 🚀 Setup (once, on a PC)
-
-1. Open Android Studio → **File > Open** → select this folder
-2. Wait for Gradle Sync to finish (if it asks for a JVM, pick 17 or higher)
-3. **Build > Build APK(s)** → `app/build/outputs/apk/debug/app-debug.apk`
-4. Install the APK on your phone. Everything after this happens on the phone.
-
-> You can also download the ready-made APK from the [Releases](../../releases) page.
-
-## 📲 Using it on your phone
-
-1. **New Project** → choose WEB, SITE, Java or Kotlin
-2. Edit your files with **Write Code** (enter the URL for SITE projects)
-3. Preview live with **Test**
-4. **Build APK** → **Install** or **Save / Share**
-5. To update the same app later, use the same key → **Keys → Back up**
-
-## ⚠️ Limitations
-
-- Java / Kotlin projects can't be compiled on the phone; export the **Project ZIP** and build it in Android Studio
-- Generated APKs are WebView-based, minSdk 24 and above
-- If you lose your keystore you can't update your app, so always back it up
-
-## 📁 Structure
-
-```
-app/src/main/java/com/mybuilder/app/   → app code (Java)
-app/src/main/assets/template/          → Android Studio ZIP template
-app/src/main/res/                      → icons and theme
-```
-
-## 🧱 Requirements
-
-- Android 7.0 (API 24) or higher
-- To build: Android Studio, JDK 17+, Gradle 8.7
+- 🌐 **Web projects to APK** — turn HTML / CSS / JS projects (or a website URL) into a signed APK directly on your phone.
+- 🔑 **Keystore management** — create, import, export and back up signing keys (`.p12`).
+- ⚙️ **App settings** — icon, permissions, theme color, full screen, screen orientation and a JavaScript bridge (`Android.toast`, `Android.share`, `Android.vibrate`, `Android.copy`, `Android.openUrl`).
+- 📦 **Android Studio export** — export Java / Kotlin projects as a ZIP to open in Android Studio.
+- 💾 **Backup & restore** — save all projects into one ZIP file and restore them on any device.
+- 🔄 **Over-the-air updates** — the app checks GitHub Releases for a newer version, downloads the APK and starts the installer.
+- 🌍 **Bilingual UI** — Turkish when the phone language is Turkish, English otherwise.
 
 ---
 
-<p align="center"><b>by N.U.B Studio</b></p>
+## 🚀 Building the app (once, on a PC)
+
+1. Open **Android Studio** → **File › Open** → select this folder.
+2. Wait for Gradle Sync to finish (accept *Use JVM 21* if asked).
+3. Run **Build › Build APK(s)**.
+4. The APK is generated at `app/build/outputs/apk/debug/app-debug.apk`.
+5. Install it on your phone. Everything else happens on the phone.
+
+---
+
+## 📲 Using the app
+
+1. Tap **New project** and choose **WEB** or **SITE**.
+2. Write your code or enter a URL, then tap **Test**.
+3. Tap **Build APK**, then **Install** or **Save / Share**.
+4. For future updates to a published app, you must sign with the **same key** — back up your keystore under **Keys › Back up**.
+
+---
+
+## ⚙️ Settings
+
+Settings are app-wide and live outside of any project. Open them with the gear icon on the project list.
+
+- **Backup**
+  - *Save backup (ZIP)* — saves all projects into a single file.
+  - *Restore from backup* — adds the projects from a ZIP as new projects. Existing projects are never overwritten.
+- **Update**
+  - *Check for updates* — compares the installed version with the latest GitHub Release and installs the new APK if you confirm.
+
+The app also checks for updates quietly each time it starts and only shows a prompt when a newer version exists.
+
+---
+
+## 🔄 How updates work
+
+The app reads the latest release of this repository:
+
+```
+https://github.com/Menemebon/MY-Mini-Builder/releases/latest
+```
+
+1. Update `versionCode` and `versionName` in `app/build.gradle` (for example `versionCode 6` and `versionName "5.1"`).
+2. On GitHub, go to **Releases › Draft a new release**.
+3. Set the tag to match the version, for example `v5.1`.
+4. Attach the **signed** APK file (`.apk`) and publish the release.
+
+Phones will then offer the update. Important requirements:
+
+- The new APK must be signed with the **same signing key** as the installed app. An APK signed with a different key cannot be installed over the existing one.
+- The release tag must be a **higher version** than the installed version.
+- Android asks for permission to install unknown apps the first time. Allow it and tap *Check for updates* again.
+
+---
+
+## ⚠️ Limitations
+
+- Java and Kotlin projects are not compiled on the phone; export them as ZIP and open them in Android Studio.
+- Generated APKs target Android 7.0+ (minSdk 24).
+- If you lose your keystore, you cannot update an app you have already published. Back it up.
+- The package name `com.mybuilder.app` is kept on purpose. Changing it would make existing installations impossible to update.
+
+---
+
+## 🧩 Project structure
+
+```
+app/src/main/java/com/mybuilder/app/
+  ProjectsActivity.java        → main screen (project list)
+  GlobalSettingsActivity.java  → app-wide settings (backup, updates)
+  UpdateChecker.java           → GitHub Releases over-the-air updates
+  Installer.java               → streamed APK installation via PackageInstaller
+  Backup.java                  → all-projects ZIP backup and restore
+  GitHubSync.java              → network helpers
+  Lang.java                    → Turkish / English text table
+app/src/main/assets/template/  → Android Studio ZIP export template
+```
+
+---
+
+## 📄 License
+
+No license has been specified yet.
+
+---
+
+<p align="center">Made with ❤️ — <b>My Mini Builder</b></p>
